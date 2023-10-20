@@ -75,7 +75,7 @@ if(symbol=="="){
 
  
  else if(symbol =="negative"){
-   setAnswer( answer * (-1));
+   setAnswer( (parseFloat(answer)*-1).toString());
    setExpression("");
  }
 else if(symbol =="percentage"){
@@ -85,7 +85,7 @@ else if(symbol =="percentage"){
   }
   
   else{
-    setAnswer((parseFloat(answer)/100));
+    setAnswer((parseFloat(answer)/100).toString());
     setExpression("");
   }
   
@@ -119,7 +119,7 @@ const calculate = () => {
 //it checks if the first string of the array is an operator, if it is not, it is get sent to
 //the operators array in the else satatement(operators.unshift(numbersClean[i]))
     
-    if(["*", "/", "+"].includes(numbersClean[i]) && isOperator(numbersClean[i-1])){
+    if(["*", "/", "+"].includes(numbersClean[i] as string) && isOperator(numbersClean[i-1] as string)){
       //it checks if the following expression includes any of the operators and the isOperator function checks is the next expression is an operator
         operators.unshift(numbersClean[i]);
         //and then it goes to the while loops and decrements 'i' a 'j amount';
@@ -127,7 +127,7 @@ const calculate = () => {
         let k= i-1;
         //the while loop check if there followinf expressions are operators and
         // if they are it is going to skip them until if finds a number
-        while(isOperator(numbersClean[k])){
+        while(isOperator(numbersClean[k] as string)){
           //it will count the operators and substract them, skip them
           //and go stright to the number
           k--;

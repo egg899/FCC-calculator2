@@ -8,6 +8,7 @@
 
 
 .container{
+  margin-top: 10%;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -15,8 +16,12 @@
   height:100vh;
   
 }
+
+
+
 #calculator{
   display: grid;
+  justify-content: center;
   grid-template-areas:
     "display display display display"
     "clear negative percentage divide"
@@ -32,6 +37,7 @@
     margin-top:20px;
     border-radius:20px;
     background-color: var(--black);
+   
     
 }
 
@@ -53,14 +59,14 @@ button{height:100px;
 font-size:24px;
  border:none;
  cursor:pointer;
- border-radius:100px;
+ border-radius:10px;
  width: 100%;
  transition: transform 0.1s ease-in-out;
 }
 
 
 button:active{
-  transform: scale(0.95);
+  transform: scale(0.75);
 }
 
 

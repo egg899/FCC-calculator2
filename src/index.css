@@ -6,7 +6,11 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
+  background-image: url('https://thumbs.dreamstime.com/b/black-teapot-nice-background-adv-others-purpose-use-43738127.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   
 }
 
